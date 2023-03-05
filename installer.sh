@@ -13,12 +13,6 @@ then
     exit 1
 fi
 
-# Check if Automatehunter.sh exists and is executable
-if [ ! -x "Automatehunter.sh" ]; then
-    echo -e "${YELLOW}Automatehunter.sh not found or is not executable. Adding execute permission...${NC}"
-    chmod +x Automatehunter.sh
-fi
-
 # Check if dependencies are installed, install them if not
 echo -e "${YELLOW}Checking dependencies...${NC}"
 declare -a dependencies=("amass" "whois" "dnsutils" "traceroute" "wafw00f" "nmap" "nikto" "nuclei")
@@ -55,5 +49,3 @@ then
 fi
 
 echo -e "${GREEN}The installation is complete.${NC}"
-
-
