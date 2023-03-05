@@ -25,7 +25,7 @@ This script automates the process of reconnaissance for a given website by runni
 
 To use this script, you must have the following tools installed on your system:
 
-- Recon-ng
+- amass
 - whois
 - nslookup
 - traceroute
