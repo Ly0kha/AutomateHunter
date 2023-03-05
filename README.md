@@ -23,7 +23,7 @@ This script automates the process of reconnaissance for a given website by runni
 
 ## 💻 Requirements:
 
-To use this script, you must have the following tools installed on your system:
+To use AutomateHunter, you must have the following tools already installed on your system:
 
 - amass
 - whois
@@ -31,9 +31,13 @@ To use this script, you must have the following tools installed on your system:
 - traceroute
 - wafw00f
 - nmap
+- rustscan
+- nikto
+- nuclei
+- ffuf
 
-``if you don't have it , just run the installer.sh``
-
+ If you don't have them, you can easily install them by running the `installer.sh` script provided with the tool.
+ 
 ## 🚀 Installation:
 
 
