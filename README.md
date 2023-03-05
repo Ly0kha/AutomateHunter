@@ -10,7 +10,7 @@ This script automates the process of reconnaissance for a given website by runni
 
 ## 🛠️ Tools used:
 
-- Recon-ng -
+- amass 
 - whois
 - nslookup
 - traceroute
