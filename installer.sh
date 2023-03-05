@@ -21,7 +21,7 @@ fi
 
 # Check if dependencies are installed, install them if not
 echo -e "${YELLOW}Checking dependencies...${NC}"
-declare -a dependencies=("amass" "whois" "dnsutils" "traceroute" "wafw00f" "nmap" "rustscan" "nikto" "nuclei" "ffuf")
+declare -a dependencies=("amass" "whois" "dnsutils" "traceroute" "wafw00f" "nmap" "nikto" "nuclei")
 for dependency in "${dependencies[@]}"
 do
     if ! command -v "$dependency" &> /dev/null
@@ -32,6 +32,16 @@ do
         echo -e "${GREEN}Successfully installed $dependency.${NC}"
     fi
 done
+
+# Install rustscan
+if ! command -v "rustscan" &> /dev/null
+then
+    echo -e "${YELLOW}rustscan is not installed. Installing now...${NC}"
+    wget https://github.com/RustScan/RustScan/releases/download/2.0.1/rustscan_2.0.1_amd64.deb
+    sudo dpkg -i rustscan_2.0.1_amd64.deb
+    echo -e "${GREEN}Successfully installed rustscan.${NC}"
+    rm -rf rustscan_2.0.1_amd64.deb
+fi
 
 # Install ffuf
 if ! command -v "ffuf" &> /dev/null
@@ -45,3 +55,5 @@ then
 fi
 
 echo -e "${GREEN}The installation is complete.${NC}"
+
+
