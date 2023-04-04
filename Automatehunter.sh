@@ -95,9 +95,13 @@ read -p "Enter wordlist file path: " wordlist_path
 read -p "Enter filter options: " filter_options
 read -p "Enter match condition (default: all): " match_condition
 read -p "Enter filter status codes (default: $FILTER_STATUS_CODES): " filter_status_codes
+read -p "Enter number of threads (default: 10): " threads
+read -p "Enter timeout in seconds (default: 10): " timeout
 match_condition=${match_condition:-all}
 filter_status_codes=${filter_status_codes:-$FILTER_STATUS_CODES}
-ffuf -w $wordlist_path -u $website_url/FUZZ -mc $match_condition -fs $filter_options
+threads=${threads:-10}
+timeout=${timeout:-10}
+ffuf -w $wordlist_path -u $website_url/FUZZ -mc $match_condition -fs $filter_options -t $threads -timeout $timeout -ac -v
 echo -e "${GREEN}Ffuf finished.${NC}"
 
 sleep 5s
