@@ -46,12 +46,6 @@ nslookup $website_url
 echo -e "${GREEN}Nslookup finished.${NC}"
 sleep 5s
 
-# traceroute - map out the target’s network
-echo -e "${YELLOW}Running traceroute...${NC}"
-traceroute $website_url
-echo -e "${GREEN}Traceroute finished.${NC}"
-sleep 5s
-
 # wafw00f -idenfiy the Waf 
 echo -e "${YELLOW}Running wafw00f...${NC}"
 wafw00f $website_url
