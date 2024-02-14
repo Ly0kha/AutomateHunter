@@ -25,11 +25,8 @@ This script automates the process of reconnaissance for a given website by runni
 To use AutomateHunter, you must have the following tools already installed on your system:
 
 - amass
-- whois
 - nslookup
-- traceroute
 - wafw00f
-- nmap
 - rustscan
 - nikto
 - nuclei
